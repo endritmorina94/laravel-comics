@@ -14,7 +14,7 @@ img {
 }
 
 .container {
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -34,12 +34,13 @@ a {
 
 .top-bar span {
   margin-left: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 nav {
   background-color: #FFFFFF;
   color: #000000;
-  padding: 20px 0;
 }
 
 nav .container {
@@ -58,11 +59,24 @@ nav .container .menu {
 
 nav .container .menu li {
   display: inline-block;
-  line-height: 100%;
+  line-height: 115px;
   margin: 0 20px;
+  cursor: pointer;
+}
+
+nav .container .menu li.active {
+  border-bottom: 5px solid #0282F9;
 }
 
 nav .container .menu li.active a {
+  color: #0282F9;
+}
+
+nav .container .menu li:hover {
+  border-bottom: 5px solid #0282F9;
+}
+
+nav .container .menu li:hover a {
   color: #0282F9;
 }
 
@@ -73,19 +87,44 @@ nav .container .menu li a {
   font-size: 17px;
 }
 
-nav .container .menu li a:hover {
-  color: #0282F9;
-}
-
 nav .container .menu li a i {
   color: #0282F9;
   margin-left: 5px;
 }
 
-nav .container input {
+nav .container .input-container {
+  position: relative;
+}
+
+nav .container .input-container input {
   border: 0;
   outline: 0;
-  border-bottom: 2px solid #0282F9;
+  border-bottom: 3px solid #0282F9;
+  padding: 5px 30px 5px 20px;
+}
+
+nav .container .input-container input::-moz-placeholder {
+  color: #000000;
+  text-align: right;
+  font-weight: 600;
+}
+
+nav .container .input-container input:-ms-input-placeholder {
+  color: #000000;
+  text-align: right;
+  font-weight: 600;
+}
+
+nav .container .input-container input::placeholder {
+  color: #000000;
+  text-align: right;
+  font-weight: 600;
+}
+
+nav .container .input-container i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 
 .banner {
@@ -134,13 +173,13 @@ nav .container input {
 }
 
 .series .container .filled-btn {
+  display: inline-block;
   background-color: #0282F9;
   color: #FFFFFF;
   text-decoration: none;
   padding: 10px 50px;
   font-weight: 500;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  display: inline-block;
   transition: background-color 0.5s;
 }
 
@@ -182,5 +221,121 @@ nav .container input {
   color: #FFFFFF;
   margin-left: 10px;
   text-transform: uppercase;
+}
+
+.top-footer {
+  background-image: url("/img/footer-bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.top-footer .container {
+  position: relative;
+  padding: 40px 0;
+}
+
+.top-footer .container .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top-footer .container .footer-links .links-column {
+  margin-right: 35px;
+}
+
+.top-footer .container .footer-links .links-column h3 {
+  color: #FFFFFF;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.top-footer .container .footer-links .links-column ul {
+  list-style-type: none;
+}
+
+.top-footer .container .footer-links .links-column ul li {
+  margin-bottom: 5px;
+}
+
+.top-footer .container .footer-links .links-column ul li a {
+  color: #A5A5A5;
+}
+
+.top-footer .container .footer-links .links-column ul li a:hover {
+  color: #0282F9;
+}
+
+.top-footer .container .footer-links .links-column .links-subcolumn {
+  margin-top: 20px;
+}
+
+.top-footer .container img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 600px;
+}
+
+.top-footer .container p {
+  color: #A5A5A5;
+  margin-top: 20px;
+}
+
+.top-footer .container p a {
+  color: #0282F9;
+}
+
+.bottom-footer {
+  background-color: #303030;
+  padding: 20px 0 25px;
+  text-transform: uppercase;
+}
+
+.bottom-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-footer .container .empty-btn {
+  display: inline-block;
+  background-color: transparent;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 500;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  border: 2px solid #0282F9;
+  font-size: 18px;
+  transition: background-color 0.5s;
+}
+
+.bottom-footer .container .empty-btn:hover {
+  background-color: #0282F9;
+}
+
+.bottom-footer .container .social-links h2 {
+  display: inline-block;
+  color: #0282F9;
+  margin-right: 20px;
+}
+
+.bottom-footer .container .social-links i {
+  color: #303030;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  background-color: #A5A5A5;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.bottom-footer .container .social-links i:hover {
+  background-color: #FFFFFF;
 }
 

@@ -54,11 +54,13 @@
                 </li>
             </ul>
 
-            <input type="text" name="" value="" placeholder="Search">
+            <div class="input-container">
+                <input type="text" name="" value="" placeholder="Search">
+                <i class="fas fa-search"></i>
+            </div>
         </div>
     </nav>
 
     <div class="banner"></div>
-
 
 </header>

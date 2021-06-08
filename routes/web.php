@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-
+    //Creo un array dal file comics nella cartella config
     $series = config("comics");
 
+    //Creo un array con i dati per il bottom banner
     $img_links = [
         [
             "url" => "img/buy-comics-digital-comics.png",
@@ -25,7 +26,7 @@ Route::get('/', function () {
         ],
         [
             "url" => "img/buy-comics-merchandise.png",
-            "title" => "DC Merchandis"
+            "title" => "DC Merchandise"
         ],
         [
             "url" => "img/buy-comics-subscriptions.png",
@@ -41,6 +42,7 @@ Route::get('/', function () {
         ]
     ];
 
+    //Inserisco i due array precedenti il un array associativo
     $data = [
         "series" => $series,
         "img_links" => $img_links

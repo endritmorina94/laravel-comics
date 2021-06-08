@@ -1,0 +1,112 @@
+.top-footer {
+    background-image: url("/img/footer-bg.jpg");
+    background-size: cover;
+    overflow: hidden;
+
+    .container {
+        position: relative;
+        padding: 40px 0;
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+
+            .links-column {
+                margin-right: 35px;
+
+                h3 {
+                    color: $primary_text;
+                    font-size: 26px;
+                    margin-bottom: 10px;
+                }
+
+                ul {
+                    list-style-type: none;
+
+                    li {
+                        margin-bottom: 5px;
+
+                        a {
+                            color: $muted-text;
+
+                            &:hover {
+                                color: $primary_color;
+                            }
+                        }
+                    }
+                }
+
+                .links-subcolumn {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 600px;
+        }
+
+        p {
+            color: $muted-text;
+            margin-top: 20px;
+
+            a {
+                color: $primary_color;
+            }
+        }
+    }
+}
+
+.bottom-footer {
+    background-color: $bg_secondary_color;
+    padding: 20px 0 25px;
+    text-transform: uppercase;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .empty-btn {
+            @include empty-btn;
+            font-size: 18px;
+            transition: background-color .5s;
+
+            &:hover {
+                background-color: $primary_color;
+            }
+        }
+
+        .social-links {
+
+            h2 {
+                display: inline-block;
+                color: $primary_color;
+                margin-right: 20px;
+            }
+
+            i {
+                color: $bg_secondary_color;
+                text-align: center;
+                line-height: 30px;
+                font-size: 20px;
+                background-color: $muted-text;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-left: 10px;
+                cursor: pointer;
+                transition: background-color .5s;
+
+                &:hover {
+                    background-color: $primary_text;
+                }
+            }
+
+        }
+    }
+}

@@ -35,7 +35,6 @@
 
         .filled-btn {
             @include filled-btn;
-            display: inline-block;
             transition: background-color .5s;
 
             &:hover {
@@ -77,12 +76,6 @@
                 margin-left: 10px;
                 text-transform: uppercase;
             }
-
-
         }
-
-
-
-
     }
 }

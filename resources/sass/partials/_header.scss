@@ -9,15 +9,15 @@
 
     span {
         margin-left: 50px;
+        text-transform: uppercase;
+        cursor: pointer;
     }
-
 
 }
 
 nav {
     background-color: $primary-text;
     color: $secondary_text;
-    padding: 20px 0;
 
     .container {
         display: flex;
@@ -33,10 +33,23 @@ nav {
 
             li {
                 display: inline-block;
-                line-height: 100%;
+                line-height: 115px;
                 margin: 0 20px;
+                cursor: pointer;
+
+                &.active {
+                    border-bottom: 5px solid $primary_color;
+                }
 
                 &.active a {
+                    color: $primary_color;
+                }
+
+                &:hover {
+                    border-bottom: 5px solid $primary_color;
+                }
+
+                &:hover a {
                     color: $primary_color;
                 }
 
@@ -46,10 +59,6 @@ nav {
                     font-weight: 500;
                     font-size: 17px;
 
-                    &:hover {
-                        color: $primary_color;
-                    }
-
                     i {
                         color: $primary_color;
                         margin-left: 5px;
@@ -58,10 +67,27 @@ nav {
             }
         }
 
-        input {
-            border: 0;
-            outline: 0;
-            border-bottom: 2px solid $primary_color;
+        .input-container {
+            position: relative;
+
+            input {
+                border: 0;
+                outline: 0;
+                border-bottom: 3px solid $primary_color;
+                padding: 5px 30px 5px 20px;
+
+                &::placeholder {
+                    color: $secondary_text;
+                    text-align: right;
+                    font-weight: 600;
+                }
+            }
+
+            i {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
         }
     }
 }

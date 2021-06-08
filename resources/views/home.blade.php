@@ -7,7 +7,6 @@
 @section('main_section')
     {{-- Inizio Sezion Series --}}
     <section class="series">
-
         <div class="container">
             {{-- Titolo del contenitore --}}
             <div class="title">
@@ -32,9 +31,8 @@
                 {{-- Fine Singola Serie --}}
             </div>
             {{-- Fine Contenitore delle Serie --}}
-
+            
             <a class="filled-btn" href="#">Load More</a>
-
         </div>
     </section>
     {{-- Fine Sezione Series --}}
@@ -53,5 +51,4 @@
         </div>
     </section>
     {{-- Fine Bottom Banner --}}
-
 @endsection
