@@ -1,0 +1,74 @@
+.top-bar {
+    background-color: $primary_color;
+    color: $primary_text;
+    text-align: right;
+    padding: 10px 0 9px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    span {
+        margin-left: 50px;
+    }
+
+
+}
+
+nav {
+    background-color: $primary-text;
+    color: $secondary_text;
+    padding: 20px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo-container {
+            width: 80px;
+        }
+
+        .menu {
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                line-height: 100%;
+                margin: 0 20px;
+
+                &.active a {
+                    color: $primary_color;
+                }
+
+                a {
+                    color: $secondary_text;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    font-size: 17px;
+
+                    &:hover {
+                        color: $primary_color;
+                    }
+
+                    i {
+                        color: $primary_color;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+
+        input {
+            border: 0;
+            outline: 0;
+            border-bottom: 2px solid $primary_color;
+        }
+    }
+}
+
+.banner {
+    background-image: url("/img/jumbotron.jpg");
+    height: 400px;
+    background-position: center top;
+}
