@@ -18,6 +18,10 @@ img {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 .top-bar {
   background-color: #0282F9;
   color: #FFFFFF;
@@ -64,7 +68,6 @@ nav .container .menu li.active a {
 
 nav .container .menu li a {
   color: #000000;
-  text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 17px;
@@ -89,5 +92,95 @@ nav .container input {
   background-image: url("/img/jumbotron.jpg");
   height: 400px;
   background-position: center top;
+}
+
+.series {
+  background-color: #1C1C1C;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.series .container {
+  position: relative;
+  padding: 60px 0 30px;
+}
+
+.series .container .title {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #0282F9;
+  padding: 15px 30px;
+  position: absolute;
+  top: -29px;
+  left: 0;
+}
+
+.series .container .series-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.series .container .series-container .serie {
+  width: calc(100% / 6 - 20px);
+  margin-bottom: 30px;
+}
+
+.series .container .series-container .serie .serie-name {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.series .container .filled-btn {
+  background-color: #0282F9;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px 50px;
+  font-weight: 500;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  transition: background-color 0.5s;
+}
+
+.series .container .filled-btn:hover {
+  background-color: #2193fd;
+}
+
+.bottom-banner {
+  background-color: #0282F9;
+  padding: 40px 10px;
+}
+
+.bottom-banner ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-banner ul li {
+  width: calc(100% / 5 - 20px);
+  cursor: pointer;
+  filter: brightness(0.85);
+  transition: filter 0.5s;
+}
+
+.bottom-banner ul li:hover {
+  filter: brightness(1);
+}
+
+.bottom-banner ul li img {
+  width: auto;
+  height: 70px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bottom-banner ul li a {
+  color: #FFFFFF;
+  margin-left: 10px;
+  text-transform: uppercase;
 }
 
