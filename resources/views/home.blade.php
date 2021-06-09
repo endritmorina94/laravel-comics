@@ -4,6 +4,8 @@
     DC Comics
 @endsection
 
+@section('main_class')series-list @endsection
+
 @section('main_section')
     {{-- Inizio Sezion Series --}}
     <section class="series">

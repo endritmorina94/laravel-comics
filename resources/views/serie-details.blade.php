@@ -4,9 +4,7 @@
     {{ $serie_details["title"] }}
 @endsection
 
-@section('main_class')
-    single-serie-details
-@endsection
+@section('main_class')single-serie-details @endsection
 
 @section('main_section')
     {{-- Inizio Top Banner --}}
