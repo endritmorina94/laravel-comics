@@ -1,0 +1,112 @@
+.single-serie-details .container {
+    width: 55%;
+    min-width: 800px;
+}
+
+.top-banner {
+    height: 75px;
+    background-color: $primary_color;
+
+    .poster-frame {
+        width: 200px;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+        position: relative;
+        bottom: 265px;
+        left: 0;
+
+        .serie-type {
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-transform: uppercase;
+            color: $primary_text;
+            background-color: #00A9D9;
+            padding: 1px 5px 2px;
+        }
+
+        .view-gallery {
+            text-transform: uppercase;
+            text-align: center;
+            background-color: #00A9D9;
+            padding: 1px 0 2px;
+
+            a {
+                color: $primary_text;
+
+                &:hover {
+                    text-shadow: 0 0 1px rgba(0, 0, 0, .7);
+                }
+            }
+        }
+    }
+}
+
+.info-top {
+
+    .container {
+        display: flex;
+        padding: 50px 0;
+
+        .general-info {
+            width: 65%;
+            margin-top: 15px;
+
+            h1 {
+                font-size: 28px;
+                text-transform: uppercase;
+                color: $tertiary_text;
+                margin-bottom: 15px;
+            }
+
+            .availability {
+                background-color: #55BA59;
+                color: $primary_text;
+                display: flex;
+                border-bottom: 2px solid #357739;
+                margin-bottom: 10px;
+
+                .price {
+                    padding: 10px 20px;
+                    flex-grow: 1;
+
+                    span {
+                        opacity: .75;
+                        text-shadow: 0 0 1px rgba(0, 0, 0, .5);
+                    }
+
+                    .result {
+                        float: right;
+                    }
+                }
+
+                .check-available {
+                    padding: 10px 20px;
+                    border-left: 2px solid #357739;
+                    cursor: pointer;
+
+                    i {
+                        font-size: 10px;
+                        position: relative;
+                        bottom: 2px;
+                        left: 2px;
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+
+        .adv-banner {
+            width: 35%;
+            padding-left: 30px;
+            text-align: right;
+            font-weight: 600;
+            cursor: pointer;
+
+            span {
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

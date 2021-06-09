@@ -16,7 +16,7 @@
 
                 h3 {
                     color: $primary_text;
-                    font-size: 26px;
+                    font-size: 20px;
                     margin-bottom: 10px;
                 }
 
@@ -73,7 +73,7 @@
 
         .empty-btn {
             @include empty-btn;
-            font-size: 18px;
+            font-size: 20px;
             transition: background-color .5s;
 
             &:hover {
@@ -87,6 +87,7 @@
                 display: inline-block;
                 color: $primary_color;
                 margin-right: 20px;
+                font-size: 22px;
             }
 
             i {

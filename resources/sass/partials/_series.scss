@@ -26,7 +26,25 @@
                 width: calc(100% / 6 - 20px);
                 margin-bottom: 30px;
 
+                .poster-container {
+                    box-shadow: 0 0 2px rgba(0, 0, 0, .6);
+                    overflow: hidden;
+
+                    &:hover {
+                        box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+                    }
+
+                    img {
+                        transition: transform .5s;
+                    }
+                }
+
+                &:hover img {
+                    transform: scale(1.05);
+                }
+
                 .serie-name {
+                    color: $primary_text;
                     margin-top: 10px;
                     text-align: left;
                 }
@@ -39,6 +57,7 @@
 
             &:hover {
                 background-color: lighten($primary_color, 7%);
+                box-shadow: 0 0 8px rgba(0, 0, 0, .8);
             }
         }
     }

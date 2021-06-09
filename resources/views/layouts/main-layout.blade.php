@@ -25,7 +25,7 @@
     {{-- Includo il file header dalla cartella partials --}}
     @include('partials.header')
 
-    <main>
+    <main class="@yield('main_class')">
         {{-- Questo è il segnalibro che indica dove verrà inserito
             il contenuto della section main_content --}}
         @yield('main_section')

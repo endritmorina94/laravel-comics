@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//ROTTA PER LA HOMEPAGE
 Route::get('/', function () {
 
     //Creo un array dal file comics nella cartella config
@@ -50,3 +51,34 @@ Route::get('/', function () {
 
     return view('home', $data);
 })->name("home");
+
+
+
+//ROTTA PER I DETTAGLI DELLA SINGOLA SERIE
+Route::get('/{id}', function ($id) {
+
+    //Creo un array dal file comics nella cartella config
+    $series = config("comics");
+
+    //Creo un array vuoto
+    $serie_details = "";
+
+    //Con il ciclo foreach vado a prendere la serie con id uguale a $id
+    foreach ($series as $serie) {
+        if ($serie["id"] == $id) {
+            $serie_details = $serie;
+        }
+    }
+
+    //Se non ne trovo nessuna e quindi l'array rimane vuoto allora stampo l'errore
+    if (empty($serie_details)) {
+        abort("404");
+    }
+
+    //Inserisco l'array in $data
+    $data = [
+        "serie_details" => $serie_details
+    ];
+
+    return view('serie-details', $data);
+})->name('serie-details');
