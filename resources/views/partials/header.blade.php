@@ -19,6 +19,8 @@
             </div>
 
             <ul class="menu">
+                {{-- Toggliamo la classe tramite il seguente ternario.
+                IN QUESTO CASO: Se è il nome della route corrisponde a characters verrà applicata la classe active--}}
                 <li class="{{ Request::route()->getName() == 'characters' ? 'active' : '' }}">
                     <a href="{{ route("characters") }}">Characters</a>
                 </li>
