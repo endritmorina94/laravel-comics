@@ -14,9 +14,6 @@
             </div>
             {{-- Fine Titolo del contenitore --}}
 
-
-
-
             {{-- Inizio Contenitore delle Serie --}}
             <div class="series-container">
                 {{-- Inizio Singola Serie --}}
@@ -25,7 +22,6 @@
                         <a href="{{ route('serie-details', [
                                     'id' => $serie['id']
                                 ]) }}">
-
                             <div class="poster-container">
                                 <img src="{{ $serie["thumb"] }}" alt="{{ $serie["title"] }}">
                             </div>

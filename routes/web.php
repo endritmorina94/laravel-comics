@@ -75,10 +75,33 @@ Route::get('/{id}', function ($id) {
         abort("404");
     }
 
-    //Inserisco l'array in $data
-    $data = [
-        "serie_details" => $serie_details
+    //Creo un array con i dati per il bottom banner
+    $img_links = [
+        [
+            "url" => "img/buy-comics-digital-comics.png",
+            "title" => "Digital Comics"
+        ],
+        [
+            "url" => "img/buy-comics-subscriptions.png",
+            "title" => "Shop DC"
+        ],
+        [
+            "url" => "img/buy-comics-shop-locator.png",
+            "title" => "Comic Shop Locator"
+        ],
+        [
+            "url" => "img/buy-comics-merchandise.png",
+            "title" => "Subscriptions"
+        ]
     ];
+
+    //Inserisco gli array in $data
+    $data = [
+        "serie_details" => $serie_details,
+        "img_links" => $img_links
+    ];
+
+
 
     return view('serie-details', $data);
 })->name('serie-details');

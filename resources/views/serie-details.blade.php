@@ -57,4 +57,80 @@
     </section>
     {{-- Fine Info Top Section --}}
 
+    {{-- Inizio Info Bottom Section --}}
+    <section class="info-bottom">
+        <div class="container">
+            {{-- Inizio Talent Info --}}
+            <div class="talents-info">
+                <h3>Talent</h3>
+                <div class="artists-container">
+                    <span>Art by:</span>
+                    <div class="artists">
+                        @foreach ($serie_details["artists"] as $artist)
+                            <a href="#"> {{ $artist }} </a>
+                            @if (!$loop->last)
+                                <span>,</span>
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
+                <div class="writers-container">
+                    <span>Written by:</span>
+
+                    <div class="artists">
+                        @foreach ($serie_details["writers"] as $writer)
+                            <a href="#"> {{$writer}} </a>
+                            @if (!$loop->last)
+                                <span>,</span>
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+            {{-- Fine Talent Info --}}
+
+            {{-- Inizio Specs Info --}}
+            <div class="specs-info">
+                <h3>Specs</h3>
+                <div class="serie-series-name">
+                    <span>Series:</span>
+                    <a href="#">
+                        {{ $serie_details["series"] }}
+                    </a>
+                </div>
+                <div class="serie-price">
+                    <span>U.S. Price:</span>
+                    <span class="price">
+                        {{ $serie_details["price"] }}
+                    </span>
+                </div>
+                <div class="serie-osd">
+                    <span>On Sale Date:</span>
+                    <span class="date">
+                        {{ $serie_details["sale_date"] }}
+                    </span>
+                </div>
+            </div>
+            {{-- Fine Specs Info --}}
+        </div>
+
+        {{-- Inizio Banner Bottom --}}
+        <div class="large-container">
+            <div class="container">
+                <ul class="bottom-banner">
+                    @foreach ($img_links as $element)
+                        <li>
+                            <div class="single-banner">
+                                <a href="#">{{$element["title"]}}</a>
+                                <img src="{{ asset($element["url"]) }}" alt="Buy Link">
+                            </div>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+        {{-- Fine Banner Bottom --}}
+    </section>
+    {{-- Fine Info Bottom Section --}}
+
 @endsection

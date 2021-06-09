@@ -23,7 +23,7 @@
                     <a href="#">Characters</a>
                 </li>
                 <li class="active">
-                    <a href="#">Comics</a>
+                    <a href="{{ route("home") }}">Comics</a>
                 </li>
                 <li>
                     <a href="#">Movies</a>
