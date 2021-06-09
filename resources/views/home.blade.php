@@ -1,9 +1,5 @@
 @extends('layouts.main-layout')
 
-@section('tag_title')
-    DC Comics
-@endsection
-
 @section('main_class')series-list @endsection
 
 @section('main_section')

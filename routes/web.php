@@ -49,13 +49,13 @@ Route::get('/', function () {
         "img_links" => $img_links
     ];
 
-    return view('home', $data);
+    return view("home", $data);
 })->name("home");
 
 
 
 //ROTTA PER I DETTAGLI DELLA SINGOLA SERIE
-Route::get('/{id}', function ($id) {
+Route::get('details/{id}', function ($id) {
 
     //Creo un array dal file comics nella cartella config
     $series = config("comics");
@@ -102,6 +102,16 @@ Route::get('/{id}', function ($id) {
     ];
 
 
-
     return view('serie-details', $data);
 })->name('serie-details');
+
+//ROTTE CASUALI PER PROVARE LA CLASSE ACTIVE
+Route::get('/characters', function () {
+
+    return view('characters');
+})->name('characters');
+
+Route::get('/movies', function () {
+
+    return view('movies');
+})->name('movies');

@@ -19,14 +19,14 @@
             </div>
 
             <ul class="menu">
-                <li>
-                    <a href="#">Characters</a>
+                <li class="{{ Request::route()->getName() == 'characters' ? 'active' : '' }}">
+                    <a href="{{ route("characters") }}">Characters</a>
                 </li>
-                <li class="active">
+                <li class="{{ Request::route()->getName() == 'home' ? 'active' : '' }}">
                     <a href="{{ route("home") }}">Comics</a>
                 </li>
-                <li>
-                    <a href="#">Movies</a>
+                <li class="{{ Request::route()->getName() == 'movies' ? 'active' : '' }}">
+                    <a href="{{ route("movies") }}">Movies</a>
                 </li>
                 <li>
                     <a href="#">Tv</a>
