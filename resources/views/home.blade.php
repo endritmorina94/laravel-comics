@@ -1,7 +1,13 @@
+{{-- Prendo il layout main-layout dalla cartella layouts --}}
 @extends('layouts.main-layout')
 
-@section('main_class')series-list @endsection
+{{-- Imposto il titolo della tab come DC Comics --}}
+@section('page_title', "DC Comics")
 
+{{-- Imposto il nome della classe main come series-list --}}
+@section('main_class', "series-list")
+
+{{-- Scrivo il codice che andrà all'interno di main_section --}}
 @section('main_section')
     {{-- Inizio Sezion Series --}}
     <section class="series">

@@ -1,10 +1,9 @@
 @extends('layouts.main-layout')
 
-@section('tag_title')
-    {{ $serie_details["title"] }}
-@endsection
+@section('page_title', $serie_details["title"])
 
-@section('main_class')single-serie-details @endsection
+@section('main_class', "single-serie-details")
+
 
 @section('main_section')
     {{-- Inizio Top Banner --}}
@@ -65,10 +64,7 @@
                     <span>Art by:</span>
                     <div class="artists">
                         @foreach ($serie_details["artists"] as $artist)
-                            <a href="#"> {{ $artist }} </a>
-                            @if (!$loop->last)
-                                <span>,</span>
-                            @endif
+                            <a href="#">{{ $artist }}</a>{{!$loop->last ? "," : ""}}
                         @endforeach
                     </div>
                 </div>
@@ -77,10 +73,7 @@
 
                     <div class="artists">
                         @foreach ($serie_details["writers"] as $writer)
-                            <a href="#"> {{$writer}} </a>
-                            @if (!$loop->last)
-                                <span>,</span>
-                            @endif
+                            <a href="#">{{$writer}}</a>{{!$loop->last ? "," : ""}}
                         @endforeach
                     </div>
                 </div>

@@ -14,9 +14,11 @@
 
     <nav>
         <div class="container">
-            <div class="logo-container">
-                <img src="{{ asset("img/dc-logo.png") }}" alt="DC Logo">
-            </div>
+            <a href="{{ route("home") }}">
+                <div class="logo-container">
+                    <img src="{{ asset("img/dc-logo.png") }}" alt="DC Logo">
+                </div>
+            </a>
 
             <ul class="menu">
                 {{-- Toggliamo la classe tramite il seguente ternario.
@@ -24,7 +26,7 @@
                 <li class="{{ Request::route()->getName() == 'characters' ? 'active' : '' }}">
                     <a href="{{ route("characters") }}">Characters</a>
                 </li>
-                <li class="{{ Request::route()->getName() == 'home' ? 'active' : '' }}">
+                <li class="{{ Request::route()->getName() == 'home' || Request::route()->getName() == 'serie-details' ? 'active' : '' }}">
                     <a href="{{ route("home") }}">Comics</a>
                 </li>
                 <li class="{{ Request::route()->getName() == 'movies' ? 'active' : '' }}">

@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DC Comics</title>
+    <title>@yield('page_title')</title>
+
+    {{-- Fav icon --}}
+    <link rel="shortcut icon" href="{{ asset("img/favicon.ico") }}">
 
     {{-- Google Font --}}
     <link rel="preconnect" href="https://fonts.gstatic.com">
